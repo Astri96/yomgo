@@ -7,11 +7,6 @@
 <p align="center">
 <a src="https://www.codefactor.io/repository/github/arugaz/yomgo/badge/master"></a>
 </p>
-<p align="center">
-<a href="https://github.com/arugaz/yomgo/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/arugaz/yomgo?color=red&style=flat-square"></a>
-<a href="https://github.com/arugaz/yomgo/network/members"><img title="Forks" src="https://img.shields.io/github/forks/arugaz/yomgo?color=red&style=flat-square"></a>
-<a href="https://github.com/arugaz/yomgo/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/arugaz/yomgo?label=Watchers&color=blue&style=flat-square"></a>
-</p>
 
 ## About Laravel
 
