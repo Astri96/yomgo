@@ -76,6 +76,26 @@
                                 </ul>
                             </li>
 
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-account-circle-line"></i>
+                                    <span>Footer Page Setup</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('footer.setup') }}">Footer Setup</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-account-circle-line"></i>
+                                    <span>Contact Message</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('contact.message') }}">Contact Message Page</a></li>
+                                </ul>
+                            </li>
+
                                 </ul>
                             </li>
 

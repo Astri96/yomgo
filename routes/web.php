@@ -7,6 +7,9 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
+use App\Http\Controllers\Home\FooterController;
+use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +22,13 @@ use App\Http\Controllers\Home\BlogController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
+// Route::get('/', function () {
+//    return view('frontend.index');
+// });
+
+// Home Alone
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'Home')->name('home');
 });
 
 // Admin Page
@@ -61,6 +69,7 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::post('/update/portfolio', 'UpdatePortfolio')->name('update.portfolio');
     Route::get('/delete/portfolio/{id}', 'DeletePortfolio')->name('delete.portfolio');
     Route::get('/portfolio/details/{id}', 'PortfolioDetails')->name('portfolio.details');
+    Route::get('/portfolio', 'HomePortfolio')->name('home.portfolio');
 });
 
 // Blog Category
@@ -84,6 +93,20 @@ Route::controller(BlogController::class)->group(function () {
     Route::get('/blog/details/{id}', 'BlogDetails')->name('blog.details');
     Route::get('/category/blog/{id}', 'CategoryBlog')->name('category.blog');
     Route::get('/blog', 'HomeBlog')->name('home.blog');
+});
+
+// Footer
+Route::controller(FooterController::class)->group(function () {
+    Route::get('/footer/setup', 'FooterSetup')->name('footer.setup');
+    Route::post('/update/footer', 'UpdateFooter')->name('update.footer');
+});
+
+// Contact
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'Contact')->name('contact.me');
+    Route::post('/store/message', 'StoreMessage')->name('store.message');
+    Route::get('/contact/message', 'ContactMessage')->name('contact.message');
+    Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
 });
 
 Route::get('/dashboard', function () {
